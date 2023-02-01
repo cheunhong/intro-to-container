@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  container-a:
+    build:
+      context: container-a
+      dockerfile: Dockerfile
+    container_name: container-a
+    env_file: .env
+    environment:
+      something: something 
+    volumes:
+      - ./container-a:/root/intro-to-container/container-a
+  
+  container-a-clone:
+    image: $DOCKER_USER/intro-to-container-a:latest
+    container_name: container-a-clone
+    env_file: .env
+    environment:
+      something: something 
+    volumes:
+      - container-a-log:/root/intro-to-container/container-a/log
+
+volumes:
+  container-a-log:
