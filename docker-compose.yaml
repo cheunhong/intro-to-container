@@ -7,8 +7,8 @@ services:
       dockerfile: Dockerfile
     container_name: container-a
     env_file: .env
-    environment:
-      something: something 
+    # environment:
+    #   ENV: staging 
     volumes:
       - ./container-a:/root/intro-to-container/container-a
   
@@ -16,10 +16,10 @@ services:
     image: $DOCKER_USER/intro-to-container-a:latest
     container_name: container-a-clone
     env_file: .env
-    environment:
-      something: something 
+    # environment:
+    #   ENV: staging 
     volumes:
-      - container-a-log:/root/intro-to-container/container-a/log
+      - container-a:/root/intro-to-container/container-a
 
 volumes:
   container-a-log:

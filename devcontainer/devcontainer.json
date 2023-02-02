@@ -1,0 +1,7 @@
+{
+    "mounts": [
+        "source=intro-to-container-devcontainer,target=/root/.vscode-server/extensions,type=volume",
+        // And/or for VS Code Insiders
+        "source=intro-to-container-devcontainer-insiders,target=/root/.vscode-server-insiders/extensions,type=volume"
+    ]
+}

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  intro-to-container-devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: intro-to-container-devcontainer
+    # env_file: .env
+    # environment:
+    #   ENV: staging 
+    volumes:
+      - .:/root/intro-to-container/devcontainer
+      - intro-to-container-devcontainer:/root/.vscode-server/extensions
+      - intro-to-container-devcontainer-insiders:/root/.vscode-server-insiders/extensions

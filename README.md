@@ -60,3 +60,13 @@ docker run \
 ```
 
 ## Docker Compose
+Showcase the use of `docker-compose`
+```bash
+docker compose up --build
+```
+
+## Dev Container
+```bash
+docker compose up --build
+```
+
